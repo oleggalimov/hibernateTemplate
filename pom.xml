@@ -16,7 +16,12 @@
     <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
-        <version>4.3.5.Final</version>
+        <version>LATEST</version>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>LATEST</version>
     </dependency>
 </dependencies>
 

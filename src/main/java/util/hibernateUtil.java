@@ -1,5 +1,6 @@
 package util;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import org.hibernate.cfg.Configuration;
@@ -10,10 +11,9 @@ public class hibernateUtil {
 
     public static SessionFactory buildSessionFactory () {
         try {
-            Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
+            SessionFactory sf = new Configuration().configure().buildSessionFactory();
 
-
-            return configuration.buildSessionFactory( new StandardServiceRegistryBuilder().applySettings( configuration.getProperties() ).build() );
+            return sf;
 
 
         } catch (Throwable ex) {

@@ -17,7 +17,8 @@
         <property name="show_sql">true</property>
 
         <!--конфигурация маппинга-->
-        <mapping resource="record.hbm.xml"/>
+        <mapping package="dto"/>
+        <mapping class="dto.record"/>
 
     </session-factory>
 

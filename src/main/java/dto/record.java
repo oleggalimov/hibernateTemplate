@@ -1,12 +1,17 @@
 package dto;
 
 
+import javax.persistence.*;
 
+@Entity
+@Table (name = "record")
 
 
 public class record {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column (name = "message")
     private String message;
 
     public record() {
