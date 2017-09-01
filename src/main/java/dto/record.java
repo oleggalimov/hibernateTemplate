@@ -10,22 +10,22 @@ import javax.persistence.*;
 public class record {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     @Column (name = "message")
     private String message;
 
     public record() {
-    };
+    }
 
     public record(String message) {
         this.message = message;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -35,5 +35,10 @@ public class record {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString () {
+        return "Запись: "+this.id + ", гласит: "+this.message;
     }
 }
